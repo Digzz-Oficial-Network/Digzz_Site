@@ -44,7 +44,7 @@
       animation: fadeInUp 1s ease-out forwards;
     }
 
-    /* Botão Download normal */
+    /* Botão Download centralizado */
     .download-btn {
       padding: 15px 50px;
       background-color: #001f8e; /* Azul escuro */
@@ -54,12 +54,18 @@
       border-radius: 15px;
       cursor: pointer;
       text-align: center;
+      text-shadow:
+        0 0 1px #001f8e,
+        0 0 2px #001f8e; /* Neon azul escuro suave */
       transition: 0.3s, box-shadow 0.3s, text-shadow 0.3s;
-      box-shadow: 0 0 2px #001f8e; /* Glow leve */
+      box-shadow: 0 0 2px #001f8e; /* Glow azul escuro baixo */
+      animation: fadeInUp 1s ease-out forwards;
     }
 
+    /* Hover: aumenta brilho azul escuro */
     .download-btn:hover {
       box-shadow: 0 0 6px #001f8e, 0 0 12px #001f8e;
+      text-shadow: 0 0 2px #001f8e, 0 0 4px #001f8e;
     }
   </style>
 </head>
