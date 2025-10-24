@@ -38,7 +38,7 @@
       box-shadow: 0 0 20px #0033ff;
       display: block;
       margin-top: 10px;
-      cursor: pointer; /* Indica que é clicável */
+      cursor: pointer;
     }
 
     .neon-text {
@@ -46,25 +46,15 @@
       font-size: 36px;
       font-weight: bold;
       white-space: nowrap;
-      text-shadow:
-        0 0 5px #001f8e,
-        0 0 10px #001f8e,
-        0 0 20px #001f8e,
-        0 0 40px #001f8e;
-      animation: floatNeon 3s ease-in-out infinite alternate;
+      text-shadow: 0 0 2px #001f8e, 0 0 4px #001f8e;
       pointer-events: none;
-    }
-
-    @keyframes floatNeon {
-      0% { transform: translateY(0); opacity: 0.8; }
-      100% { transform: translateY(-5px); opacity: 1; }
     }
   </style>
 </head>
 <body>
 
   <div class="img-row">
-    <!-- Imagem 2.png clicável -->
+    <!-- Imagem 2.png -->
     <div class="img-container">
       <div class="neon-text">Chume Labs 1</div>
       <img src="2.png" alt="Imagem 2" id="chume1-img">
@@ -73,15 +63,17 @@
     <!-- Imagem 1.png -->
     <div class="img-container">
       <div class="neon-text">Chume Labs 2</div>
-      <img src="1.png" alt="Imagem 1">
+      <img src="1.png" alt="Imagem 1" id="chume2-img">
     </div>
   </div>
 
   <script>
-    const chume1Img = document.getElementById('chume1-img');
+    document.getElementById('chume1-img').addEventListener('click', () => {
+      window.location.href = 'chume1.html';
+    });
 
-    chume1Img.addEventListener('click', () => {
-      window.location.href = 'chume1.html'; // Redireciona para a nova página
+    document.getElementById('chume2-img').addEventListener('click', () => {
+      window.location.href = 'chume2.html';
     });
   </script>
 
