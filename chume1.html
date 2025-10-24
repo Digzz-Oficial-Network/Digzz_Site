@@ -14,55 +14,41 @@
       font-family: 'Arial Black', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Centraliza verticalmente */
+      justify-content: center;
       align-items: center;
       height: 100vh;
       overflow: hidden;
     }
 
-    /* Animação de entrada */
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* Texto principal com neon azul escuro suave */
     h1 {
-      margin-bottom: 50px; /* Um pouco acima do botão */
+      margin-bottom: 50px;
       font-size: 48px;
       text-align: center;
-      color: #001f8e; /* Azul escuro */
-      text-shadow:
-        0 0 1px #001f8e,
-        0 0 3px #001f8e; /* Neon azul escuro suave */
+      color: #001f8e;
+      text-shadow: 0 0 1px #001f8e, 0 0 3px #001f8e;
       animation: fadeInUp 1s ease-out forwards;
     }
 
-    /* Botão Download centralizado */
     .download-btn {
       padding: 15px 50px;
-      background-color: #001f8e; /* Azul escuro */
+      background-color: #001f8e;
       color: #fff;
       font-size: 24px;
       font-weight: bold;
       border-radius: 15px;
       cursor: pointer;
       text-align: center;
-      text-shadow:
-        0 0 1px #001f8e,
-        0 0 2px #001f8e; /* Neon azul escuro suave */
+      text-shadow: 0 0 1px #001f8e, 0 0 2px #001f8e;
       transition: 0.3s, box-shadow 0.3s, text-shadow 0.3s;
-      box-shadow: 0 0 2px #001f8e; /* Glow azul escuro baixo */
+      box-shadow: 0 0 2px #001f8e;
       animation: fadeInUp 1s ease-out forwards;
     }
 
-    /* Hover: aumenta brilho azul escuro */
     .download-btn:hover {
       box-shadow: 0 0 6px #001f8e, 0 0 12px #001f8e;
       text-shadow: 0 0 2px #001f8e, 0 0 4px #001f8e;
@@ -71,11 +57,17 @@
 </head>
 <body>
 
-  <!-- Texto principal -->
   <h1>Chume Labs 1 - 1.8.9</h1>
 
   <!-- Botão Download centralizado -->
-  <div class="download-btn">Download</div>
+  <div class="download-btn" id="downloadBtn">Download</div>
+
+  <script>
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', () => {
+      window.location.href = 'https://www.mediafire.com/file/2q5t3yqbz8c9zv1/Digzz_--_Old_Chume_Labs__1.zip/file';
+    });
+  </script>
 
 </body>
 </html>
