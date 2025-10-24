@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Digzz</title>
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Arial Black', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .img-row {
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #0033ff;
+      display: block;
+      margin-top: 10px;
+      cursor: pointer; /* Indica que é clicável */
+    }
+
+    .neon-text {
+      color: #001f8e;
+      font-size: 36px;
+      font-weight: bold;
+      white-space: nowrap;
+      text-shadow:
+        0 0 5px #001f8e,
+        0 0 10px #001f8e,
+        0 0 20px #001f8e,
+        0 0 40px #001f8e;
+      animation: floatNeon 3s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes floatNeon {
+      0% { transform: translateY(0); opacity: 0.8; }
+      100% { transform: translateY(-5px); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="img-row">
+    <!-- Imagem 2.png clicável -->
+    <div class="img-container">
+      <div class="neon-text">Chume Labs 1</div>
+      <img src="2.png" alt="Imagem 2" id="chume1-img">
+    </div>
+
+    <!-- Imagem 1.png -->
+    <div class="img-container">
+      <div class="neon-text">Chume Labs 2</div>
+      <img src="1.png" alt="Imagem 1">
+    </div>
+  </div>
+
+  <script>
+    const chume1Img = document.getElementById('chume1-img');
+
+    chume1Img.addEventListener('click', () => {
+      window.location.href = 'chume1.html'; // Redireciona para a nova página
+    });
+  </script>
+
+</body>
+</html>

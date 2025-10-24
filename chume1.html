@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chume Labs 1</title>
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Arial Black', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centraliza verticalmente */
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Animação de entrada */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Texto principal com neon azul escuro suave */
+    h1 {
+      margin-bottom: 50px; /* Um pouco acima do botão */
+      font-size: 48px;
+      text-align: center;
+      color: #001f8e; /* Azul escuro */
+      text-shadow:
+        0 0 1px #001f8e,
+        0 0 3px #001f8e; /* Neon azul escuro suave */
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    /* Botão Download normal */
+    .download-btn {
+      padding: 15px 50px;
+      background-color: #001f8e; /* Azul escuro */
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 15px;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+      box-shadow: 0 0 2px #001f8e; /* Glow leve */
+    }
+
+    .download-btn:hover {
+      box-shadow: 0 0 6px #001f8e, 0 0 12px #001f8e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Texto principal -->
+  <h1>Chume Labs 1 - 1.8.9</h1>
+
+  <!-- Botão Download centralizado -->
+  <div class="download-btn">Download</div>
+
+</body>
+</html>
